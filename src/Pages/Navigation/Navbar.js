@@ -30,7 +30,7 @@ export default function Navbar() {
           })}
         </nav>
       ) : (
-        <div>
+        <div className=" p-5">
           <div className="md:hidden relative  z-50 flex items-center">
             <button
               onClick={
@@ -58,26 +58,31 @@ export default function Navbar() {
           </div>
 
           <div className="hidden   bg-opacity-50 bg-red-400 h-full w-full absolute left-0 top-0    mobile-menu">
-            <nav className=" text-white  flex  flex-col-reverse justify-items-center   ">
-              {MENU.map((menu) => {
-                const selected = router === menu.path;
+            <nav
+              className="  bg-orange-500 w-full h-screen flex justify-center  items-center
+                 "
+            >
+              <div>
+                {MENU.map((menu) => {
+                  const selected = router === menu.path;
 
-                return (
-                  <Button
-                    onClick={(event) => {
-                      menus.classList.toggle("hidden");
-                    }}
-                    themes="navbarMobil"
-                    key={menu.key}
-                    notify={menu.notify}
-                    selected={selected}
-                    href={menu.path}
-                    icons={selected ? menu.iconSelected : menu.icon}
-                  >
-                    {menu.title}
-                  </Button>
-                );
-              })}
+                  return (
+                    <Button
+                      onClick={(event) => {
+                        menus.classList.toggle("hidden");
+                      }}
+                      themes="navbarMobil"
+                      key={menu.key}
+                      notify={menu.notify}
+                      selected={selected}
+                      href={menu.path}
+                      icons={selected ? menu.iconSelected : menu.icon}
+                    >
+                      {menu.title}
+                    </Button>
+                  );
+                })}
+              </div>
             </nav>
           </div>
         </div>
