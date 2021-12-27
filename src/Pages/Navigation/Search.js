@@ -8,7 +8,7 @@ export default function Search() {
         <SvgSearch />
       </span>
       <input
-        className="  border-btn-primary focus:outline-none  pl-7 rounded-full border border-solid  w-52  h-8 "
+        className=" bg-widget-color border-widget-color focus:outline-none  pl-7 rounded-full border border-solid  w-52  h-8 "
         type="text"
       />
     </div>

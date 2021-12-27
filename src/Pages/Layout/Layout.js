@@ -6,14 +6,22 @@ import useWindowSize from "../../components/useWindowSize";
 export default function Layout({ children }) {
   const size = useWindowSize();
   return (
-    <div className=" w-full h-full ">
+    <div className="   text-white  font-raleway text-sm   container  mx-auto h-full ">
       <Navigation />
-      <Sidebar />
-      <div>
-        width
-        {children} {size.width}px / {size.height}px
+      <div className="flex mt-4">
+        <div className=" w-[300px]">
+          <Sidebar />
+        </div>
+        <div className=" mx-4 flex-1 w-auto">{children}</div>
+
+        {size.width > 750 ? (
+          <div className=" w-[332px] ">
+            <ExtraSidebar />
+          </div>
+        ) : (
+          <div> küçük</div>
+        )}
       </div>
-      {size.width > 750 ? <ExtraSidebar /> : <div> küçük</div>}
     </div>
   );
 }

@@ -57,7 +57,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className="hidden   bg-opacity-50 bg-red-400 h-full w-full absolute left-0 top-0    mobile-menu">
+          <div className="hidden  z-50   bg-opacity-50 bg-red-400 h-full w-full absolute left-0 top-0    mobile-menu">
             <nav
               className="  bg-orange-500 w-full h-screen flex justify-center  items-center
                  "
