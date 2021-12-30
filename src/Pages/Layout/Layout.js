@@ -9,18 +9,21 @@ export default function Layout({ children }) {
     <div className="   text-white  font-raleway text-sm   container  mx-auto h-full ">
       <Navigation />
       <div className="flex mt-4">
-        <div className=" w-[300px]">
-          <Sidebar />
+        {size.width > 750 ? (
+          <div className=" w-[300px]">
+            <Sidebar />
+          </div>
+        ) : null}
+
+        <div className=" border-x-2  border-text-color mx-4 flex-1 w-auto">
+          {children}
         </div>
-        <div className=" mx-4 flex-1 w-auto">{children}</div>
 
         {size.width > 750 ? (
           <div className=" w-[332px] ">
             <ExtraSidebar />
           </div>
-        ) : (
-          <div> küçük</div>
-        )}
+        ) : null}
       </div>
     </div>
   );

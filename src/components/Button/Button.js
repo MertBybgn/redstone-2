@@ -18,7 +18,10 @@ const style = {
       " w-3/4   justify-center mr-4 rounded-3xl  p-2 flex bg-transparent  text-btn-primary  hover:bg-btn-primary   hover:text-white hover:transition-colors  ",
 
     follow:
-      " w-[78px] h-8 bg-white block p-2 rounded-3xl hover:bg-follow-btn-hover  flex text-text-color items-center  justify-center  ",
+      " w-[78px] h-8 bg-white block p-2 rounded-3xl hover:bg-follow-btn-hover font-medium flex text-text-color items-center  justify-center  ",
+
+    Tweet:
+      " w-[74px] h-8 block  px-4   bg-btn-primary  text-white rounded-3xl hover:bg-tweet-hover font-medium flex  items-center  justify-center  ",
   },
 };
 function BaseLinkBtn({ href, children, ...props }) {
@@ -30,7 +33,7 @@ function BaseLinkBtn({ href, children, ...props }) {
 }
 function Navbtn({ href, children, themes, notify, icons, ...props }) {
   return (
-    <div className="    ">
+    <div className="     ">
       <Link to={href} {...props}>
         <div className="  flex  justify-center items-center ">
           <div className="relative mr-2">

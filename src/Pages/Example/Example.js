@@ -12,7 +12,7 @@ export default function Example() {
       <Avatar rounded="full" size="xxl" />
 
       <BackgroundImg size="sm" />
-      <BackgroundImg size="lg" />
+      <BackgroundImg size="sm" />
     </div>
   );
 }
