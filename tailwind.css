@@ -6,3 +6,15 @@
   position: absolute;
   left: 14px;
 }
+
+@layer components {
+  .layout {
+    @apply text-white   font-raleway text-sm  sm:container  md:w-[900px]  xl:container  mx-auto h-full;
+  }
+  .main {
+    @apply border-x-2  border-0 sm:w-full  min-w-[300px] w-auto border-text-color sm:mx-4 flex-1;
+  }
+  .shares-icon {
+    @apply rounded-full w-8 h-8 flex justify-center items-center;
+  }
+}

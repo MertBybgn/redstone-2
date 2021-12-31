@@ -6,7 +6,7 @@ import useWindowSize from "../../components/useWindowSize";
 export default function Layout({ children }) {
   const size = useWindowSize();
   return (
-    <div className="   text-white  font-raleway text-sm   container  mx-auto h-full ">
+    <div className="  layout  ">
       <Navigation />
       <div className="flex mt-4">
         {size.width > 750 ? (
@@ -15,11 +15,9 @@ export default function Layout({ children }) {
           </div>
         ) : null}
 
-        <div className=" border-x-2  border-text-color mx-4 flex-1 w-auto">
-          {children}
-        </div>
+        <div className="main ">{children}</div>
 
-        {size.width > 750 ? (
+        {size.width > 1200 ? (
           <div className=" w-[332px] ">
             <ExtraSidebar />
           </div>
