@@ -5,3 +5,9 @@
 .image-upload > input {
   display: none;
 }
+
+.image {
+  disable: flex;
+  justify-content: center;
+  align-items: center;
+}

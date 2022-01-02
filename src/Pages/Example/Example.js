@@ -1,18 +1,27 @@
 import React from "react";
-import Avatar from "../../components/Avatar";
-import BackgroundImg from "../../components/BackgroundImg";
-
+import { Image } from "antd";
 export default function Example() {
   return (
-    <div>
-      <Avatar rounded="full" size="sm" />
-
-      <Avatar rounded="full" size="base" />
-      <Avatar rounded="full" size="xl" />
-      <Avatar rounded="full" size="xxl" />
-
-      <BackgroundImg size="sm" />
-      <BackgroundImg size="sm" />
-    </div>
+    <Image.PreviewGroup
+      previewPrefixCls="image"
+      style={{ height: "100%", display: "flex" }}
+    >
+      <Image
+        width={200}
+        style={{
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+      />
+      <p className=" flex items-center "></p>
+      <Image
+        width={200}
+        style={{ height: "100%" }}
+        src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"
+      />
+    </Image.PreviewGroup>
   );
 }

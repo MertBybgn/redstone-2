@@ -1,7 +1,7 @@
 import React from "react";
 import { Question, Emoji, Media, Gif } from "../../icons";
 
-export default function SharesFiles() {
+export default function SharesFiles({ handleChangeimg }) {
   return (
     <div className=" text-btn-primary  py-2 w-full   flex  gap-2  text-xl  border-btn-primary  ">
       <div className=" mert shares-icon  ">
@@ -10,7 +10,12 @@ export default function SharesFiles() {
             <Media />
           </label>
 
-          <input id="file-input" type="file" />
+          <input
+            id="file-input"
+            multiple
+            onChange={handleChangeimg}
+            type="file"
+          />
         </div>
       </div>
 

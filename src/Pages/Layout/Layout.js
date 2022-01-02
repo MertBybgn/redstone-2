@@ -3,6 +3,7 @@ import Navigation from "../Navigation/Navigation";
 import ExtraSidebar from "./ExtraSidebar";
 import Sidebar from "./Sidebar";
 import useWindowSize from "../../components/useWindowSize";
+import "antd/dist/antd.css";
 export default function Layout({ children }) {
   const size = useWindowSize();
   return (
