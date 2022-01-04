@@ -20,32 +20,14 @@ export default function SharesFiles({ handleChangeimg }) {
       </div>
 
       <div className=" mert shares-icon  ">
-        <div className="image-upload   ">
-          <label htmlFor="file-input" className=" ">
-            <Gif />
-          </label>
-
-          <input id="file-input" type="file" />
-        </div>
+        <Gif />
       </div>
 
       <div className=" mert shares-icon  ">
-        <div className="image-upload   ">
-          <label htmlFor="file-input" className=" ">
-            <Question />
-          </label>
-
-          <input id="file-input" type="file" />
-        </div>
+        <Question />
       </div>
       <div className=" mert shares-icon  ">
-        <div className="image-upload   ">
-          <label htmlFor="file-input" className=" ">
-            <Emoji />
-          </label>
-
-          <input id="file-input" type="file" />
-        </div>
+        <Emoji />
       </div>
     </div>
   );

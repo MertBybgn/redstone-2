@@ -4,11 +4,9 @@ import Example from "../Pages/Example/Example";
 import Home from "../Pages/Home";
 import Layout from "../Pages/Layout/Layout";
 
-import "../main-style.css";
-import "../style.css";
 function AppRouter() {
   return (
-    <div className=" bg-body-color h-full">
+    <div className=" bg-body-color a23sss h-full">
       <BrowserRouter>
         <Layout>
           <Routes>

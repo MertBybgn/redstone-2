@@ -17,4 +17,8 @@
   .shares-icon {
     @apply rounded-full w-8 h-8 flex justify-center items-center;
   }
+
+  .sharesimg {
+    @apply w-5;
+  }
 }

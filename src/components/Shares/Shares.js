@@ -6,26 +6,41 @@ import Button from "../Button/Button";
 import "react-circular-progressbar/dist/styles.css";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import SharesFiles from "./SharesFiles";
-import { Image } from "antd";
+import Image from "../Image";
 
 export default function Shares() {
   const [Textarea, SetTextarea] = useState("");
-  const [files1, Setfiles1] = useState();
-  const [files2, Setfiles2] = useState();
-  const [files3, Setfiles3] = useState();
+  const TextareaValue = Textarea.length;
+  const [files1, Setfiles1] = useState("");
+  const [files2, Setfiles2] = useState("");
+  const [files3, Setfiles3] = useState("");
+  const [files4, Setfiles4] = useState("");
+
+  function resetfile1() {
+    Setfiles1("");
+  }
+  function resetfile2() {
+    Setfiles2("");
+  }
+  function resetfile3() {
+    Setfiles3("");
+  }
+  function resetfile4() {
+    Setfiles4("");
+  }
   function Handilchench(event) {
     SetTextarea(event.target.value);
   }
-  const TextareaValue = Textarea.length;
+  console.log(Textarea.slice(Textarea.indexOf("#"), 6));
 
   function handleChangeimg(event) {
-    Setfiles1(URL.createObjectURL(event.target.files[0]));
-    Setfiles2(URL.createObjectURL(event.target.files[1]));
-    Setfiles3(URL.createObjectURL(event.target.files[2]));
+    console.log(event.target.files[0]);
+
+    Setfiles1(window.URL.createObjectURL(event.target.files[0]));
+    Setfiles2(window.URL.createObjectURL(event.target.files[1]));
+    Setfiles3(window.URL.createObjectURL(event.target.files[2]));
+    Setfiles4(window.URL.createObjectURL(event.target.files[3]));
   }
-  console.log(files1);
-  console.log(files2);
-  console.log(files3);
 
   return (
     <div
@@ -39,12 +54,19 @@ export default function Shares() {
         <div className="w-full h-28 px-2  mb-2">
           <TextArea Handilchench={Handilchench}></TextArea>
         </div>
-        <div className=" w-full  h-full">
-          <Image.PreviewGroup>
-            <Image width={200} height={150} src={files1} />
-            <Image width={200} height={150} src={files2} />
-            <Image width={200} height={150} src={files3} />
-          </Image.PreviewGroup>
+
+        <div>
+          <Image
+            reset="on"
+            src1={files1}
+            src2={files2}
+            src3={files3}
+            src4={files4}
+            setfiles1={resetfile1}
+            setfiles2={resetfile2}
+            setfiles3={resetfile3}
+            setfiles4={resetfile4}
+          />
         </div>
         <div className="flex  justify-between  border-t-tweet-hover  border-t-2 pr-2">
           <div>
